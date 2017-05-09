@@ -25,10 +25,9 @@ public class UIController : MonoBehaviour
     {
         foreach (var item in backPack.Items)
         {
-            var go = new GameObject(item.Name, typeof(Button), typeof(Image));
+            var go = new GameObject("", typeof(Button), typeof(Image));
             var button = go.GetComponent<Button>();
-            var image = go.GetComponent<Image>();
-            image.sprite = item.sprite;
+            var image = go.GetComponent<Image>();           
             go.transform.SetParent(view.InventoryGrid.transform);
             go.transform.ResetTransformation();
         }
