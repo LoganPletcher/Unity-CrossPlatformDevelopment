@@ -11,8 +11,7 @@ public class BackPack : MonoBehaviour
 
     private void Start()
     {
-        foreach (var item in inspectorItems)
-            item.Initialize(gameObject);
+        
     }
 
     public bool Add(Item item)
@@ -30,8 +29,4 @@ public class BackPack : MonoBehaviour
         return false;
     }
 
-    public void PrintItems()
-    {
-        Items.ForEach(item => Debug.Log(item.Name));
-    }
 }
